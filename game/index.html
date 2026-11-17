@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen Drift — a lantern-keeper arcade</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: #05081a;
+    color: #eaf6ff;
+    font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 12px 26px;
+    box-sizing: border-box;
+  }
+  canvas {
+    width: min(960px, 96vw);
+    height: auto;
+    aspect-ratio: 960 / 600;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(110, 243, 255, 0.25), 0 18px 60px rgba(0, 0, 0, 0.6), 0 0 80px rgba(80, 120, 255, 0.18);
+    background: #0a0e27;
+    touch-action: none;
+  }
+  .foot {
+    font-size: 13px;
+    color: #9db8d6;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .foot b { color: #ffd166; }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="600"></canvas>
+<div class="foot">
+  <b>LUMEN DRIFT</b> — gather every star pearl, outrun the ink wisps, clear 10 waves.<br>
+  Steer: WASD / arrows / hold mouse &nbsp;•&nbsp; Dash: SPACE (dash through a wisp to burst it) &nbsp;•&nbsp; P pause &nbsp;•&nbsp; M mute
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
